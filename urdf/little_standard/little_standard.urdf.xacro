@@ -13,6 +13,13 @@
         <xacro:include filename="$(find rm_description)/urdf/little_standard/chassis.urdf.xacro"/>
         <xacro:chassis roller_type="$(arg roller_type)"/>
 
+
+        <xacro:include filename="$(find rm_description)/urdf/common/lidar2d.urdf.xacro"/>
+        <xacro:lidar2d connected_to="base_link" lidar_name="livox_frame" simulation="$(arg use_simulation)"
+                       xyz="0.212 0 0.1"
+                       rpy="0 0 0"/>
+
+
         <xacro:if value="$(arg load_gimbal)">
             <xacro:include filename="$(find rm_description)/urdf/little_standard/gimbal.urdf.xacro"/>
             <xacro:include filename="$(find rm_description)/urdf/little_standard/gimbal.transmission.urdf.xacro"/>
