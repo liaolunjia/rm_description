@@ -18,7 +18,7 @@
             <mechanicalReduction>-1</mechanicalReduction>
         </actuator>
         <joint name="pitch_joint">
-            <offset>2.61</offset>
+            <offset>5.979</offset>
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
         </joint>
     </transmission>
